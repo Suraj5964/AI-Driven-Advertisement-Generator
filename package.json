@@ -1,0 +1,14 @@
+{
+  "name": "ai-ad-generator",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "dev": "concurrently \"npm --prefix backend run dev\" \"npm --prefix frontend run dev -- --host 0.0.0.0 --port 5173\"",
+    "backend": "npm --prefix backend run dev",
+    "frontend": "npm --prefix frontend run dev -- --host 0.0.0.0 --port 5173",
+    "build": "npm --prefix frontend run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
